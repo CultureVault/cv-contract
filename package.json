@@ -1,0 +1,36 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "hardhat --network rinkeby run ./scripts/deploy.ts",
+    "deployNFT": "hardhat run ./scripts/deployNFT.ts",
+    "deployProxy": "hardhat run ./scripts/deployProxy.ts",
+    "mint": "hardhat run ./scripts/mint.ts",
+    "trade": "hardhat run ./scripts/trade.ts",
+    "test": "hardhat --network ganache test test/local/*",
+    "testOnline": "hardhat --network rinkeby test test/online",
+    "testLog": "hardhat --network hardhat test test/local/*",
+    "verify": "hardhat --network goerli run ./scripts/verify.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "operator-filter-registry": "^1.4.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-ganache": "^2.0.1",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.17.12",
+    "chai": "^4.3.8",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
